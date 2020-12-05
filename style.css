@@ -1,0 +1,151 @@
+/* Can I use the css rules for 1st, 2nd, third to do the different margins? */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+
+}
+
+body {
+  margin: 80px 24px 10px 24px;
+
+  background: url(bg-pattern-top-mobile.svg) top left, url(./images/bg-pattern-bottom-mobile.svg) bottom center;
+
+  font-size: 15px;
+  font-family: 'Spartan', sans-serif;
+}
+
+.satisfied-customers {
+
+}
+
+.satisfied-customers h1 {
+  margin-bottom: 18px;
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -1.14286px;
+  color: var(--very-dark-magenta);
+}
+
+.satisfied-customers p {
+  margin-bottom: 40px;
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: var(--dark-grayish-magenta);
+}
+
+.wrapper__star-rating {
+  margin-bottom: 48px;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 445px;
+  margin-bottom: 16px;
+  padding: 16px 0;
+  background: var(--light-grayish-magenta);
+  border-radius: 8px;
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--very-dark-magenta);
+}
+
+.star-rating__stars {
+  margin-bottom: 12px;
+}
+
+.star-rating__stars img {
+  margin: 0 2.5px 0 2.5px;
+}
+
+.endorsement {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 350px;
+  margin-bottom: 16px;
+  padding: 40px 32px 32px 32px;
+  background: var(--very-dark-magenta);
+  border-radius: 8px;
+  font-family: Spartan;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.232143px;
+  color: var(--white);
+}
+
+.endorsement__avatar {
+  border-radius: 50%;
+  margin: 0 23px 26px 0;
+}
+
+.endorsement__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.endorsement__name {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.endorsement__status {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--soft-pink);
+}
+
+.endorsement__quote {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.232143px;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+.attribution {
+  font-size: 0.6em;
+  text-align: center;
+  color: var(--dark-grayish-magenta);
+}
+
+.attribution a {
+  color: var(--very-dark-magenta);
+}
+
+.attribution a:hover {
+  color: var(--soft-pink);
+}
