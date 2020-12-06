@@ -1,5 +1,3 @@
-/* Can I use the css rules for 1st, 2nd, third to do the different margins? */
-
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
 
 * {
@@ -18,16 +16,21 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   margin: 80px 24px 10px 24px;
-
-  background: url(bg-pattern-top-mobile.svg) top left, url(./images/bg-pattern-bottom-mobile.svg) bottom center;
-
+  background:
+    url(./images/bg-pattern-top-mobile.svg) top left no-repeat,
+    url(./images/bg-pattern-bottom-mobile.svg) bottom center no-repeat;
   font-size: 15px;
   font-family: 'Spartan', sans-serif;
 }
 
-.satisfied-customers {
-
+.body__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
 }
 
 .satisfied-customers h1 {
@@ -62,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 445px;
+  width: 327px;
   margin-bottom: 16px;
   padding: 16px 0;
   background: var(--light-grayish-magenta);
@@ -133,6 +136,7 @@ body {
 }
 
 footer {
+  width: 100%;
   margin-top: 80px;
 }
 
@@ -148,4 +152,100 @@ footer {
 
 .attribution a:hover {
   color: var(--soft-pink);
+}
+
+
+
+@media screen and (min-width: 1135px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background:
+      url(./images/bg-pattern-top-desktop.svg) top left no-repeat,
+      url(./images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+  }
+  
+  .body__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1110px;
+    margin-top: 119px;
+  }
+
+  .satisfied-customers {
+    max-width: 445px;
+  }
+
+  .satisfied-customers h1 {
+    margin-bottom: 12px;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.71429px;
+    text-align: left;
+  }
+
+  .satisfied-customers p {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    text-align: left;
+  }
+
+  .wrapper__star-rating {
+    flex-grow: 1;
+    padding-left: 125px;
+    padding-top: 15px;
+  }
+
+  .star-rating {
+    flex-direction: row;
+    width: 445px;
+    padding: 14px 0 8px 29px;
+  }
+
+  .star-rating span {
+    margin-left: 26px;
+  }
+
+  .wrapper__star-rating div:nth-child(2) { 
+    margin-left: 47px;
+  }
+
+  .wrapper__star-rating div:nth-child(3) { 
+    margin-left: calc(2 * 47px);
+  }
+
+  .endorsement__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .endorsement__wrapper div:nth-child(2){
+    margin: 15px 30px 0 30px;
+  }
+
+  .endorsement__wrapper div:nth-child(3){
+    margin-top: 30px;
+  }
+
+  .endorsement {
+    height: 234px;
+    padding-top: 0;
+  }
+
+  .endorsement__avatar {
+    margin: 40px -9px 26px 0;
+  }
+
+  .endorsement__details {
+    padding-top: 28px;
+    align-self: flex-start;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
 }
